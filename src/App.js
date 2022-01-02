@@ -11,6 +11,7 @@ import {
 	CryptoDetails,
 } from './components';
 import './App.css';
+const { Title } = Typography;
 const App = () => {
 	return (
 		<div className='app'>
@@ -40,14 +41,11 @@ const App = () => {
 					</div>
 				</Layout>
 				<div className='footer'>
-					<Typography.Title
-						level={5}
-						style={{ color: 'white', textAlign: 'center' }}
-					>
+					<Title level={5} style={{ color: 'white', textAlign: 'center' }}>
 						CryptoVerse
 						<br />
 						All rights reserved
-					</Typography.Title>
+					</Title>
 					<Space>
 						<Link to='/'>Home</Link>
 						<Link to='/exchanges'>Exchanges</Link>

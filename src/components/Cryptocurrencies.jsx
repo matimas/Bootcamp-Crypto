@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Card, Row, Col, Input } from 'antd';
 
 import { useGetCryptosQuery } from '../services/cryptoApi';
+
 const Cryptocurrencies = ({ simplified }) => {
 	const count = simplified ? 10 : 100;
 	const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
@@ -37,7 +38,7 @@ const Cryptocurrencies = ({ simplified }) => {
 						className='crypto-card'
 						key={currency.uuid}
 					>
-						<Link to={`/currency/${currency.uuid}`}>
+						<Link to={`/crypto/${currency.uuid}`}>
 							<Card
 								title={`${currency.rank}. ${currency.name}`}
 								extra={<img className='crypto-image' src={currency.iconUrl} />}

@@ -8,8 +8,7 @@ import { useGetCryptosQuery } from '../services/cryptoApi';
 const { Text, Title } = Typography;
 const { Option } = Select;
 
-const demoImage =
-	'http://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg';
+const demoImage = 'http://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC';
 
 const News = ({ simplified }) => {
 	const [newsCategory, setNewsCategory] = useState('Cryptocurrency');
@@ -36,7 +35,9 @@ const News = ({ simplified }) => {
 					>
 						<Option value='Cryptocurrency'>Cryptocurrency</Option>
 						{data?.data?.coins.map((coin) => (
-							<Option value={coin.name}>{coin.name}</Option>
+							<Option value={coin.name} key={coin.uuid}>
+								{coin.name}
+							</Option>
 						))}
 					</Select>
 				</Col>
