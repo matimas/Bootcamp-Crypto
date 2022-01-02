@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Select, Typography, Row, Col, Avatar, Card } from 'antd';
 import moment from 'moment';
 
@@ -45,7 +45,7 @@ const News = ({ simplified }) => {
 			{cryptoNews.value.map((news, i) => (
 				<Col xs={24} xs={12} lg={8} key={i}>
 					<Card hoverable className='news-card'>
-						<a href={news.url} target='blank' rel='noreferrer'>
+						<a href={news.url} target='_blank' rel='noreferrer'>
 							<div className='news-image-container'>
 								<Title className='news-title' level={4}>
 									{news.name}
