@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Card, Row, Col, Input } from 'antd';
 
 import { useGetCryptosQuery } from '../services/cryptoApi';
+import Loader from './Loader';
 
 const Cryptocurrencies = ({ simplified }) => {
 	const count = simplified ? 10 : 100;
@@ -18,7 +19,7 @@ const Cryptocurrencies = ({ simplified }) => {
 		setCryptos(filteredData);
 	}, [cryptosList, searchTerm]);
 
-	if (isFetching) return 'Loading...';
+	if (isFetching) return <Loader />;
 	return (
 		<>
 			{!simplified && (
@@ -40,6 +41,7 @@ const Cryptocurrencies = ({ simplified }) => {
 					>
 						<Link to={`/crypto/${currency.uuid}`}>
 							<Card
+								style={{ borderRadius: '70px' }}
 								title={`${currency.rank}. ${currency.name}`}
 								extra={
 									<img

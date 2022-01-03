@@ -20,6 +20,7 @@ import {
 	useGetCryptoHistoryQuery,
 } from '../services/cryptoApi';
 import Chart from './Chart';
+import Loader from './Loader';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -33,7 +34,7 @@ const CryptoDetails = () => {
 		timeperiod,
 	});
 
-	if (isFetching) return 'Loading...';
+	if (isFetching) return <Loader />;
 
 	const cryptoDetails = data?.data?.coin;
 	const volume = cryptoDetails['24hVolume'] || 0;
