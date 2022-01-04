@@ -3,10 +3,10 @@ import { Button, Menu, Typography, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
 import {
 	HomeOutlined,
-	MoneyCollectOutlined,
 	BulbOutlined,
 	FundOutlined,
 	MenuOutlined,
+	LoginOutlined,
 } from '@ant-design/icons';
 
 import icon from '../images/cryptocurrency.jpg';
@@ -37,7 +37,7 @@ const Navbar = () => {
 			<div className='logo-container'>
 				<Avatar src={icon} size='large' />
 				<Typography.Title level={2} className='logo'>
-					<Link to='/'>Cryptoverse</Link>
+					<Link to='/'>Mativerse</Link>
 				</Typography.Title>
 				<Button
 					className='menu-control-container'
@@ -47,18 +47,18 @@ const Navbar = () => {
 				</Button>
 			</div>
 			{activeMenu && (
-				<Menu theme='dark'>
+				<Menu theme='dark' className='menu-container'>
 					<Menu.Item icon={<HomeOutlined />} key='home'>
 						<Link to='/'>Home</Link>
 					</Menu.Item>
 					<Menu.Item icon={<FundOutlined />} key='cryptocurrencies'>
 						<Link to='/cryptocurrencies'>Cryptocurrencies</Link>
 					</Menu.Item>
-					<Menu.Item icon={<MoneyCollectOutlined />} key='exchanges'>
-						<Link to='/exchanges'>Exchanges</Link>
-					</Menu.Item>
 					<Menu.Item icon={<BulbOutlined />} key='news'>
 						<Link to='/news'>News</Link>
+					</Menu.Item>
+					<Menu.Item icon={<LoginOutlined />} key='login'>
+						<Link to='/login'>Login</Link>
 					</Menu.Item>
 				</Menu>
 			)}

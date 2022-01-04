@@ -20,16 +20,20 @@ a:hover {
 
 .app {
 	display: flex;
+	flex-direction: column;
 	overflow: hidden;
 }
 
 .navbar {
-	flex: 0.15;
-	background-color: rgb(0, 21, 41);
+	display: flex;
+	justify-content: space-around;
+	z-index: 1;
 }
 
 .main {
-	flex: 0.85;
+	display: flex;
+	flex-direction: column;
+	padding-top: 70px;
 	width: 100%;
 }
 .routes {
@@ -37,9 +41,10 @@ a:hover {
 	background: linear-gradient(278deg, #ffaa00ad, transparent);
 }
 .nav-container {
+	display: flex;
+	width: 100vw;
 	position: fixed;
-	left: 0;
-	height: 100vh;
+	height: 10vh;
 	margin: 0px;
 	background-color: rgb(0, 21, 41);
 }
@@ -65,6 +70,12 @@ a:hover {
 	font-size: 1.2rem !important;
 	background-color: var(--bgSecondary) !important;
 	border: none !important;
+}
+.menu-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
 }
 
 .loader {
@@ -104,7 +115,7 @@ a:hover {
 
 	.main {
 		flex: 1;
-		margin-top: 90px;
+		margin-top: 40px;
 		margin-left: 0px;
 		margin-right: 10px;
 	}
@@ -348,9 +359,6 @@ a:hover {
 .show-more {
 	margin-top: 0px !important;
 }
-.exchange-image {
-	margin: 0px 10px !important;
-}
 .search-crypto {
 	margin: 20px auto 30px auto;
 	width: 250px;
@@ -360,8 +368,6 @@ a:hover {
 }
 .crypto-card {
 	min-width: 250px;
-	background: linear-gradient(262deg, #de9400, #00000073);
-	border-radius: 50px;
 }
 .crypto-card .crypto-image {
 	width: 35px;
@@ -377,4 +383,12 @@ a:hover {
 	flex-direction: column;
 	padding: 20px;
 	align-items: center;
+}
+.spinner {
+	margin: 20px 0;
+	margin-bottom: 20px;
+	padding: 30px 50px;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.05);
+	border-radius: 4px;
 }
