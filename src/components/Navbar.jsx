@@ -7,12 +7,26 @@ import {
 	FundOutlined,
 	MenuOutlined,
 	LoginOutlined,
+	LogoutOutlined,
 } from '@ant-design/icons';
-
 import icon from '../images/cryptocurrency.jpg';
+import { auth } from '../services/firebase-config';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+
 const Navbar = () => {
 	const [activeMenu, setActivMenu] = useState(true);
 	const [screenSize, setScreenSize] = useState(null);
+	const [user, setUser] = useState({});
+
+	const logOut = async () => {
+		await signOut(auth);
+	};
+
+	useEffect(() => {
+		onAuthStateChanged(auth, (currentUser) => {
+			setUser(currentUser);
+		});
+	}, [user]);
 
 	useEffect(() => {
 		const handleResize = () => setScreenSize(window.innerWidth);
@@ -57,9 +71,17 @@ const Navbar = () => {
 					<Menu.Item icon={<BulbOutlined />} key='news'>
 						<Link to='/news'>News</Link>
 					</Menu.Item>
-					<Menu.Item icon={<LoginOutlined />} key='login'>
-						<Link to='/login'>Login</Link>
-					</Menu.Item>
+					{user?.email ? (
+						<Menu.Item icon={<LogoutOutlined />} key='logout'>
+							<Link to='/' onClick={logOut}>
+								Logout
+							</Link>
+						</Menu.Item>
+					) : (
+						<Menu.Item icon={<LoginOutlined />} key='login'>
+							<Link to='/login'>Login</Link>
+						</Menu.Item>
+					)}
 				</Menu>
 			)}
 		</div>

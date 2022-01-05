@@ -130,9 +130,15 @@ a:hover {
 		display: block !important;
 	}
 
+	.logo-container {
+		height: 100px;
+	}
+
 	.ant-menu {
+		display: flow-root;
 		position: absolute;
 		right: 0px;
+		top: 57px;
 	}
 	.home-title {
 		font-size: 1.4rem !important;

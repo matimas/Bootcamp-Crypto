@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
-
+import { auth } from './services/firebase-config';
+import { onAuthStateChanged } from 'firebase/auth';
 import {
 	Navbar,
 	Login,
@@ -13,6 +14,14 @@ import {
 import './App.css';
 const { Title } = Typography;
 const App = () => {
+	const [user, setUser] = useState({});
+
+	useEffect(() => {
+		onAuthStateChanged(auth, (currentUser) => {
+			setUser(currentUser);
+		});
+	}, [user]);
+
 	return (
 		<div className='app'>
 			<div className='navbar'>
@@ -31,9 +40,11 @@ const App = () => {
 							<Route exact path='/cryptocurrencies'>
 								<Cryptocurrencies />
 							</Route>
-							<Route exact path='/crypto/:coinId'>
-								<CryptoDetails />
-							</Route>
+							{user?.email ? (
+								<Route exact path='/crypto/:coinId'>
+									<CryptoDetails />
+								</Route>
+							) : null}
 							<Route exact path='/news'>
 								<News />
 							</Route>
@@ -42,7 +53,7 @@ const App = () => {
 				</Layout>
 				<div className='footer'>
 					<Title level={5} style={{ color: 'white', textAlign: 'center' }}>
-						CryptoVerse
+						MatiVerse
 						<br />
 						All rights reserved
 					</Title>
