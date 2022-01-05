@@ -33,19 +33,17 @@ a:hover {
 .main {
 	display: flex;
 	flex-direction: column;
-	padding-top: 70px;
+	padding-top: 60px;
 	width: 100%;
 }
 .routes {
 	padding: 20px;
-	background: linear-gradient(278deg, #ffaa00ad, transparent);
 }
 .nav-container {
 	display: flex;
 	width: 100vw;
 	position: fixed;
-	height: 10vh;
-	margin: 0px;
+	height: 7vh;
 	background-color: rgb(0, 21, 41);
 }
 

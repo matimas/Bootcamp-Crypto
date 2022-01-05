@@ -27,18 +27,16 @@ const News = ({ simplified }) => {
 					<Select
 						showSearch
 						className='select-news'
-						placeholder='Selecta Crypto'
+						placeholder='Select a Crypto'
 						optionFilterProp='children'
 						onChange={(value) => setNewsCategory(value)}
 						filterOption={(input, option) =>
-							option.children.toLowerCase().indexof(input.toLowerCase()) >= 0
+							option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
 						}
 					>
-						<Option value='Cryptocurrency'>Cryptocurrency</Option>
-						{data?.data?.coins.map((coin) => (
-							<Option value={coin.name} key={coin.uuid}>
-								{coin.name}
-							</Option>
+						<Option value='Cryptocurency'>Cryptocurrency</Option>
+						{data?.data?.coins?.map((currency) => (
+							<Option value={currency.name}>{currency.name}</Option>
 						))}
 					</Select>
 				</Col>

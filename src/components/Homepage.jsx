@@ -1,6 +1,6 @@
 import React from 'react';
 import millify from 'millify';
-import { Typography, Row, Col, Statistic } from 'antd';
+import { Typography, Row, Statistic } from 'antd';
 import { Link } from 'react-router-dom';
 
 import { useGetCryptosQuery } from '../services/cryptoApi';
@@ -20,35 +20,34 @@ const Homepage = () => {
 			<Title level={2} className='heading'>
 				Global Crypto Stats
 			</Title>
-			<Row>
-				<Col span={12}>
-					<Statistic title='Total Criptocurrencies' value={globalStats.total} />
-				</Col>
-				<Col span={12}>
+			<div style={{ display: 'flex' }}>
+				<Row>
 					<Statistic
+						style={{ marginRight: '1.5vw' }}
+						title='Total Criptocurrencies'
+						value={globalStats.total}
+					/>
+					<Statistic
+						style={{ marginRight: '1.5vw' }}
 						title='Total Excahnges'
 						value={millify(globalStats.totalExchanges)}
 					/>
-				</Col>
-				<Col span={12}>
 					<Statistic
+						style={{ marginRight: '1.5vw' }}
 						title='Total Market cap'
 						value={millify(globalStats.totalMarketCap)}
 					/>
-				</Col>
-				<Col span={12}>
 					<Statistic
+						style={{ marginRight: '1.5vw' }}
 						title='Total 24h Volume'
 						value={millify(globalStats.total24hVolume)}
 					/>
-				</Col>
-				<Col span={12}>
 					<Statistic
 						title='Total Markets'
 						value={millify(globalStats.totalMarkets)}
 					/>
-				</Col>
-			</Row>
+				</Row>
+			</div>
 			<div className='home-heading-container'>
 				<Title level={2} className='home-title'>
 					Top 8 CryptoCurrencies in the world
