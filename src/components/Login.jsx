@@ -33,7 +33,7 @@ const Login = () => {
 	return (
 		<Form
 			style={{
-				height: '74.3vh',
+				height: '75.455vh',
 				display: 'flex',
 				flexDirection: 'column',
 				justifyContent: 'center',
@@ -48,7 +48,7 @@ const Login = () => {
 			autoComplete='off'
 		>
 			<Form.Item style={{ textAlign: 'center', paddingLeft: '12vw' }}>
-				<Text style={{ fontSize: '25px' }}>Login</Text>
+				<Text style={{ fontSize: '45px' }}>Login</Text>
 			</Form.Item>
 			<Form.Item
 				label='Email'

@@ -37,6 +37,9 @@ const App = () => {
 							<Route exact path='/login'>
 								<Login />
 							</Route>
+							<Route exact path='/news'>
+								<News />
+							</Route>
 							<Route exact path='/cryptocurrencies'>
 								<Cryptocurrencies />
 							</Route>
@@ -44,10 +47,13 @@ const App = () => {
 								<Route exact path='/crypto/:coinId'>
 									<CryptoDetails />
 								</Route>
-							) : null}
-							<Route exact path='/news'>
-								<News />
-							</Route>
+							) : (
+								<Title level={2}>
+									TO SEE THE COIN DETAILS YOU MOST TO LOGIN
+									<br />
+									<Link to='/login'>Login</Link>
+								</Title>
+							)}
 						</Switch>
 					</div>
 				</Layout>
