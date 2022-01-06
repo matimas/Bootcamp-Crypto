@@ -1,10 +1,9 @@
 ## MatiVerse
 
-A site for searching for virtual currencies and the latest news on currency types
+A site for searching a virtual currencies and the latest news on currency types
 
 ### Setup
 
-```
 To start the app:
 
 1. Clone the repository
@@ -19,7 +18,6 @@ HTML
 
 ###📦Dependencies:
 #### Client:
-```
 
 react
 react-router-dom
