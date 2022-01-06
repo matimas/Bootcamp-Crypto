@@ -49,7 +49,7 @@ const App = () => {
 								</Route>
 							) : (
 								<Title level={2}>
-									TO SEE THE COIN DETAILS YOU MOST TO LOGIN
+									TO SEE THE COIN DETAILS YOU MOST TO LOGIN!!
 									<br />
 									<Link to='/login'>Login</Link>
 								</Title>
