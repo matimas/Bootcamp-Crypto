@@ -11,11 +11,12 @@ To start the app:
 3. `npm start`
 
 🧑‍💻 Languages
+``
 React
 JavaScript
 CSS
 HTML
-
+``
 ###📦Dependencies:
 #### Client:
 ```
