@@ -18,7 +18,7 @@ HTML
 
 ###📦Dependencies:
 #### Client:
-
+```
 react
 react-router-dom
 html-react-parser
@@ -29,7 +29,7 @@ Chart.js-2
 axios
 millify
 moment
-
+```
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
