@@ -6,7 +6,7 @@ A site for searching a virtual currencies and the latest news on currency types
 
 To start the app:
 
-1. Clone the repository
+1. `Clone the repository`
 2. `npm run install`
 3. `npm start`
 
