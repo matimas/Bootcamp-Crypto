@@ -1,6 +1,6 @@
 ## MatiVerse
 
-A site for searching for virtual currencies and the latest news on currency types
+A site for searching a virtual currencies and the latest news on currency types
 
 ### Setup
 

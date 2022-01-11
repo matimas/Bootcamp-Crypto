@@ -48,11 +48,16 @@ const App = () => {
 									<CryptoDetails />
 								</Route>
 							) : (
-								<Title level={2}>
-									TO SEE THE COIN DETAILS YOU MOST TO LOGIN!!
-									<br />
-									<Link to='/login'>Login</Link>
-								</Title>
+								<Route>
+									<Title
+										level={2}
+										style={{ textAlign: 'center', color: 'red' }}
+									>
+										To see the coin details you most to login!!
+										<br />
+										<Link to='/login'>Login</Link>
+									</Title>
+								</Route>
 							)}
 						</Switch>
 					</div>
