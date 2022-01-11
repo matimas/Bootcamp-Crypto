@@ -4,23 +4,22 @@ A site for searching a virtual currencies and the latest news on currency types
 
 ### Setup
 
-```
 To start the app:
 
-1. Clone the repository
+1. `Clone the repository`
 2. `npm run install`
 3. `npm start`
 
 🧑‍💻 Languages
-React
-JavaScript
-CSS
-HTML
+
+`React`
+`JavaScript`
+`CSS`
+`HTML`
 
 ###📦Dependencies:
 #### Client:
 ```
-
 react
 react-router-dom
 html-react-parser
@@ -31,7 +30,7 @@ Chart.js-2
 axios
 millify
 moment
-
+```
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
